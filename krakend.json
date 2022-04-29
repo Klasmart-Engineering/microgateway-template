@@ -16,6 +16,13 @@
       "backend_disabled": false,
       "endpoint_disabled": false,
       "listen_address": ":8090"
+    },
+    "router": {
+      "logger_skip_paths": [
+        "/__health",
+        "/__stats"
+      ],
+      "disable_access_log": true
     }
   },
   "plugin": {
