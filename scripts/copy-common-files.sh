@@ -1,3 +1,4 @@
 #!/bin/sh
 
-find ./config/settings -type d -exec cp ./config/settings/common.json {} \;
+# Intended to be run within Dockerfile
+find /etc/krakend/config/settings -type d -exec cp /etc/krakend/config/settings/common.json {} \;
