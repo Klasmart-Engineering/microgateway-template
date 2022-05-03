@@ -10,7 +10,6 @@ ENV FC_SETTINGS=/etc/krakend/config/settings/${ENVIRONMENT}/${REGION}
 ENV FC_PARTIALS=/etc/krakend/config/partials
 ENV FC_TEMPLATES=/etc/krakend/config/templates
 
-RUN mkdir /etc/krakend/config
 COPY config/ /etc/krakend/config/
 COPY krakend.json/ /etc/krakend/krakend.json
 COPY scripts/validate.sh validate.sh
