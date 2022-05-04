@@ -10,6 +10,12 @@ Please endeavor to review and merge these PRs in as quickly as possible as it wi
 
 As some of the configuration is centrally managed, the team has a number of **protected** files within the file tree _(that will be automatically synced with your repository)_. These protected files will automatically be overwritten in your repository, so please avoid editting them.
 
+## Helm
+
+The team has provided a base `values.yaml` file for you to customize specific to your microgateway. Please customize it
+as you need. You might also need to create mutliple versions of the file for different environments. If you have any
+requirements which the current template doesn't support, please feed this back to the API management team.
+
 ### Protected files
 
 | Path                                               | Description                                                                                          |
