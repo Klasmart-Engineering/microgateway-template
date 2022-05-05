@@ -1,4 +1,4 @@
-name: Validate & Build Microgateway image
+name: Validate & build microgateway image
 
 on:
   push:
@@ -7,22 +7,12 @@ jobs:
   test-configuration:
     name: Test the KrakenD configuration
     uses: KL-Engineering/central-microgateway-configuration/.github/workflows/validate-configuration.yaml@main
-    with:
-      aws-role-session-name: microgateway-validate-action
-      aws-region: eu-west-2
     secrets:
       github-token: ${{ secrets.GATEWAY_CONFIG_SYNC_BOT }}
-      aws-role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
 
   build-image:
     name: Build and push image
     needs: test-configuration
     uses: KL-Engineering/central-microgateway-configuration/.github/workflows/build-and-push-image.yaml@main
-    with:
-      docker-repository: shared-microgateway
-      aws-role-session-name: microgateway-build-action
-      aws-region: eu-west-2
     secrets:
       github-token: ${{ secrets.GATEWAY_CONFIG_SYNC_BOT }}
-      aws-role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
-      docker-registry: ${{ secrets.DOCKER_REPO_URL }}
