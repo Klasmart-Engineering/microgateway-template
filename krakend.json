@@ -33,7 +33,7 @@
   "cache_ttl": "300s",
   "output_encoding": "json",
   "name": "<product name>-microgateway",
-  "port": 443,
+  "port": 8080,
   "endpoints": [
     {{ template "example.tmpl" . }}
   ]
