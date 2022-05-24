@@ -21,6 +21,7 @@ As some of the configuration is [centrally managed](https://github.com/KL-Engine
    2. These will automatically be built into your docker image by the `Dockerfile` provided
 6. Most of the build artefacts should work out of the box (eg. `Dockerfile`, github-actions) however please feel free to customize these as you see fit.
    1. Please avoid changing the base images however, as we manage these centrally (`kl-krakend-builder` & `kl-krakend`)
+7. Go to your **Repository Settings** -> **Collaborators & Teams** and add `Repo Admin` this is required in order to grant write access to the automated sync mechanism
    
 ## Useful Links
 
